@@ -11,24 +11,3 @@ const DogList = ({ dogList }) => {
 }
 
 export default DogList
-
-/* useEffect(() => {
-  async function fetchData() {
-    const response = await api.getUsers({ email: search })
-    setUsers(response.data["hydra:member"])
-  }
-  fetchData()
-}, [search])
-
-const resultListDog = listDog.map((dog) => (
-    <a key={`dog-${dog.id}`} href="/dog">
-      <li> {dog.name} </li>
-    </a>
-  ))
-
-
-axios.get(`https://api.TheDogAPI.com/v1/breeds`).then((res) => {
-      setDogList({ dogList: res.data })
-      console.log(res)
-    })
- */
