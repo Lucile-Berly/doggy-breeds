@@ -5,5 +5,3 @@ const DisplayList = (props) => {
 }
 
 export default DisplayList
-
-//Race :  | Origine :{props.dog.origin} | Espérance de vie : {props.dog.life_span} | Tempérament : {props.dog.temperament}
