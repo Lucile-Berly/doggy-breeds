@@ -1,6 +1,10 @@
 const layoutStyle = {
-  margin: 20,
-  padding: 20
+  margin: 10,
+  padding: 10,
+  fontFamily: "sans-serif",
+  listStyleType: "none",
+  textDecoration: "none",
+  textAlign: "center"
 }
 
 export default function Layout(props) {

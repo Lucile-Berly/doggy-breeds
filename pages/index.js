@@ -3,11 +3,24 @@ import DogList from "../components/DogList"
 import axios from "axios"
 
 const Home = ({ dogs }) => {
-  const [search, setSearch] = React.useState("")
-  const [selectedDog, setSelectedDog] = React.useState(dogs)
-  const [searchResults, setSearchResults] = React.useState(dogs)
+  const [search, setSearch] = useState("")
+  const [selectedDog, setSelectedDog] = useState(dogs)
+  const [searchResults, setSearchResults] = useState(dogs)
   const handleChange = (event) => {
     setSearch(event.target.value)
+  }
+
+  const searchInput = {
+    width: 300,
+    borderRadius: 2,
+    marginBottom: 50,
+    padding: 10
+  }
+  const centerInput = {
+    textAlign: "center"
+  }
+  const title = {
+    marginBottom: 50
   }
 
   //Filtrer les résultats qui correspondent à la recherche
@@ -17,8 +30,9 @@ const Home = ({ dogs }) => {
   }, [search])
 
   return (
-    <div>
-      <input type="text" placeholder="Search" onChange={handleChange} value={search} />
+    <div style={centerInput}>
+      <h1 style={title}>Doggy Breeds</h1>
+      <input type="text" placeholder="Search a breed" onChange={handleChange} value={search} style={searchInput} />
 
       <DogList selectedDog={searchResults} />
     </div>
@@ -35,17 +49,3 @@ Home.getInitialProps = async () => {
 }
 
 export default Home
-
-/* 
-
-Post.getInitialProps = async function(context) {
-  const { id } = context.query
-  const res = await axios.get(`https://api.TheDogAPI.com/v1/breeds/${id}`)
-  return { res: res.data }
-}
-
-4-Afficher l'image du chien sur le detail de la race 
-
- 
-
-*/
