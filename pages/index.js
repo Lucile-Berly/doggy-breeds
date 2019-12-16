@@ -46,13 +46,6 @@ Post.getInitialProps = async function(context) {
 
 4-Afficher l'image du chien sur le detail de la race 
 
-  useEffect(() => {
-    async function getDog() {
-      const response = await axios.get("https://api.TheDogAPI.com/v1/breeds")
-      setDogList(response.data)
-      setSearchResults(response.data)
-    }
-    getDog()
-  }, [])
+ 
 
 */
