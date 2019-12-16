@@ -18,12 +18,12 @@ const Post = (props) => {
   return (
     <Layout>
       <h1>{props.res.name}</h1>
-      <p>Groupe race : {props.res.breed_group}</p>
-      <p>Élevé pour : {props.res.bred_for}</p>
-      <p>Origine : {props.res.origin}</p>
-      <p>Caractère : {props.res.temperament}</p>
-      <p>Durée de vie : {props.res.life_span}</p>
-      {photoDog && <img src={photoDog[0].url} width={photoDog.width} height={photoDog.height} alt="a dog" />}
+      <p>Breed group : {props.res.breed_group}</p>
+      <p>Bred for : {props.res.bred_for}</p>
+      <p>Origin : {props.res.origin}</p>
+      <p>Temperament : {props.res.temperament}</p>
+      <p>Life span : {props.res.life_span}</p>
+      {photoDog && <img src={photoDog[0].url} width="400px" height="250px" alt="a dog" />}
     </Layout>
   )
 }
@@ -35,50 +35,3 @@ Post.getInitialProps = async function(context) {
 }
 
 export default Post
-
-/*   <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
-    `}</style> */
